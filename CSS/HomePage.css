@@ -1,0 +1,72 @@
+﻿body {
+    color:rgb(212,172,42);
+    font-size:120%;
+    margin:0px;
+    padding:0px;
+    font-family:fantasy;
+}
+#top {
+    background-color:rgb(186,20,24);
+    height:300px;
+    
+    
+    
+}
+
+#dog {
+    position:fixed;
+    right:15px;
+    top:7px;
+
+}
+
+.main {
+    clear:both;
+    background-color:black;
+    color:silver;
+}
+
+#Favorites {
+    position:relative;
+    left:300px;
+    top:-169px;
+    
+}
+#doglink {
+    background-color:rgb(186,20,24);
+    color:rgb(212,172,42);
+    text-decoration-color:rgb(186,20,24);
+    text-align:center;
+}
+
+#lineone, #linetwo {
+    background-color:rgb(212,172,42);
+    height:5px;
+}
+
+h2 {
+    border-bottom: 1px solid silver;
+    width:300px;
+   
+}
+#link {
+    text-decoration:none;
+}
+
+.table {
+    border: 5px solid silver;
+    margin:0px;
+}
+
+a {
+    text-decoration:none;
+    color:rgb(212,172,42);
+    text-align:center;
+
+}
+
+a:hover {
+ text-decoration:underline;
+ color:blue;
+
+}

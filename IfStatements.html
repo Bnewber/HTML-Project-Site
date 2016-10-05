@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>Guessing Game</title>
+    
+    </head>
+    
+    <body>
+
+        
+        <p id="password">Guess a number between 1-5</p>
+
+        <input id="user" type="text" placeholder="Guess" />
+        
+        <button id="btn">Guess</button>
+
+        <p id="Welcome"></p>
+        
+        
+        <script type="text/javascript">
+
+            do {
+                var x = Math.floor(Math.random() *5) + 1;
+
+                document.getElementById("btn").onclick = function () {
+
+                    var y = "";
+
+                    y = document.getElementById("user").value;
+
+
+
+                    if (x == y) {
+
+                        document.getElementById("Welcome").innerHTML = "You So SmArT!!";
+
+                    }
+                    else {
+
+                        
+
+                        document.getElementById("Welcome").innerHTML = "Incorrect the number was " + x;
+
+                        x = Math.floor(Math.random() * 5) + 1;
+
+                    }
+
+                }
+            } while (x != y);
+
+
+        </script>
+
+        <p>Easier Version</p>
+        
+        <p id="p1">Guess a number between 1-5</p>
+
+        <input id="Text1" type="text" placeholder="Guess" />
+        
+        <button id="Button1">Guess</button>
+
+        <p id="P2"></p>
+        
+        
+        <script type="text/javascript">
+
+            do {
+                var a = Math.floor(Math.random() * 5) + 1;
+
+                var d = "Your guess was to high, try again";
+
+                var e = "Your guess was to low, try again";
+
+
+                document.getElementById("Button1").onclick = function () {
+                    
+
+                    var b = document.getElementById("Text1").value;
+
+                    if (a == b) {
+
+                        document.getElementById("P2").innerHTML = "You So SmArT!!";
+
+                    }
+                    else {
+
+                        if (a < b) {
+
+                            
+                            document.getElementById("P2").innerHTML = d;
+
+                            
+                        }
+
+                        else {
+                            
+                            document.getElementById("P2").innerHTML = e;
+
+
+
+                        }
+
+                        
+                    }
+
+                    
+
+                }
+            } while (a != b);
+
+
+        </script>
+
+        <div id="tweetDiv"></div>
+
+        <script type="text/javascript">
+
+            var tweetString = "";
+
+            var tweets = ["Hello", "Coffee"]
+
+
+
+            for (var i = 0; i < tweets.length; i++) {
+
+                tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+                
+
+            }
+
+            document.getElementById("tweetDiv").innerHTML = tweetString;
+
+        </script>
+
+            <p id="userInput">Enter a number that is between 1 & 10</p>
+
+            <input id="userNum" type="text" placeholder="Number 1-10" />
+            
+            <button id="btn1">Guess</button>
+
+            <div id="computerGuesses"></div>
+            
+            <p id="total"></p>    
+
+        <script type="text/javascript">
+
+            document.getElementById("btn1").onclick = function () {
+
+                var i = document.getElementById("userNum").value;
+
+                var x = "";
+
+                var counts = new Array();
+
+                var c = 0;
+
+                var a = "";
+
+                if (i > 10 || i < 0) {
+
+                    alert("What a rebel...Your number was either too large or too small");
+
+                }
+
+                else {
+
+                    while (x != i) {
+
+                        x = Math.floor(Math.random() * 10) + 1;
+
+                        counts.push(x);
+
+                        c++;
+
+
+                    }
+
+                    for (b = 0; b < counts.length; b++) {
+                        a = a + counts[b] + ", ";
+                    }
+
+                    document.getElementById("computerGuesses").innerHTML = "Computers Guess: " + a;
+
+                    document.getElementById("total").innerHTML = "Total number of computer guesses: " + c;
+
+                    console.log(counts);
+
+                    counts.clear();
+
+                }
+
+            }
+
+
+        </script>
+
+    
+
+    </body>
+
+</html>
